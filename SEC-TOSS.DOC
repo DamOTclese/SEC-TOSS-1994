@@ -1,0 +1,59 @@
+
+                Sec-Toss, Version 1.0, December 1994
+                        Fredric L. Rice
+                  The Skeptic Tank, 1:102/890.0
+                        (818) 335-9601
+
+Overview:
+    The program scans your inbound network directory for messages
+    which contain a keyword and moves them to another directory.
+
+ErrorLevel Values:
+
+        No_Problem              0
+
+    The program did everything without a problem.
+
+        Cant_Find_Config_File   10
+
+    The configuration file couldn't be found.  The environment
+    variable "SEC-TOSS" can be created to point to the path and the
+    file name.  If no environment variable is set, the program
+    looks in the default directory.
+
+        Cant_Open_File          11
+
+    A message file (*.MSG) in the network directory couldn't be
+    opened for some reason.
+
+        Configuration_Bad       12
+
+    The configuration file is missing something.
+
+        Cant_Create_Message     13
+
+    A message file can't be created in the destination directory.  The
+    most common reasons are because the directory doesn't exist or
+    there is no disk space remaining.
+
+        Cant_Write_Message      14
+
+    A message file can't be written to the destination directory.  The
+    most common reasons are because the directory doesn't exist or
+    there is no disk space remaining.
+
+Configuration:
+
+        net-directory { path }
+
+    Tells the program what your inbound network mail directory is.
+
+        dest-directory { path }
+
+    Tells the program where to move messages to.
+
+        keyword { keyword(s) }
+
+    Tells the program what keyword or phrase to search for.  For the
+    secular humanist mailing list, the keyword is 'SECHUM'.
+
